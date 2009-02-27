@@ -6,6 +6,7 @@ http://github.com/cjbottaro/app_config/tree/master
 and 
 http://github.com/railsmonk/configuration-file-plugin/tree/master
 
+The main thing I wanted to change is that files are separated not by environment, but by concern. Each file can use merging (described below) to avoid repeating, and accidentally miss adding new stuff (which I constantly do). And you can also use ignore + yml.sample approach for sensitive config. 
 
 Installation
 ============
