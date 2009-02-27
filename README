@@ -1,13 +1,43 @@
 Confu
 =====
 
-Introduction goes here.
+Confu is a micro-mini (think wicked weasel sized) utility I extracted from a couple of projects. Influenced by 
+http://github.com/cjbottaro/app_config/tree/master
+and 
+http://github.com/railsmonk/configuration-file-plugin/tree/master
 
 
-Example
-=======
+Installation
+============
 
-Example goes here.
+From your project's RAILS_ROOT, run:
+
+script/plugin install git://github.com/underlog/confu.git
+
+mkdir config/site
+
+Then you put multiple yml files in the site folder. Each config file will result in {file_name}Config constant defined, loading the current environment's section values. 
+
+So if you have site.yml, containing
+
+development:
+  home_page_entries: 3
+production:
+  home_page_entries: 5
+
+You will have SiteConfig defined, and SiteConfig.home_page_entries returning 3 and 5 in development and production, respectively.
+
+YAML has some neat DRY stuff, actually - check this out:
+http://www.yaml.org/refcard.html
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+One thing that comes in handy is merging keys from mapping - like this.
+
+development: &default
+  home_page_entries: 3
+  admin_entries: 4
+production:
+  <<: &default
+  home_page_entries: 5
+
+Copyright (c) 2009 Petyo Ivanov, released under the MIT license
