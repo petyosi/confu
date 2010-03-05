@@ -38,7 +38,7 @@ development: &default
   home_page_entries: 3
   admin_entries: 4
 production:
-  <<: &default
+  <<: *default
   home_page_entries: 5
 
 Copyright (c) 2009 Petyo Ivanov, released under the MIT license
