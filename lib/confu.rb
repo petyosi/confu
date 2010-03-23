@@ -5,7 +5,7 @@ module Confu
     end
 
     def method_missing(id)
-      @content[id] or super
+      @content.keys.include?(id) ? @content[id] : super
     end
   end
 
