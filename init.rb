@@ -1,1 +1,1 @@
-Confu.load_config_files(File.join(RAILS_ROOT, 'config', 'site'))
+Confu.load_config_files(File.join(Rails.root, 'config', 'site'))

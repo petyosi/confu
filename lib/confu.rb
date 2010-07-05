@@ -1,3 +1,4 @@
+
 module Confu
   class Config
     def initialize(content)
@@ -12,7 +13,7 @@ module Confu
   def self.load_config_files(path)
     Dir[File.join(path, '*yml')].each do |file|
       name = File.basename(file, '.yml').camelize + 'Config'
-      yml = YAML.load_file(file)[RAILS_ENV]
+      yml = YAML.load_file(file)[Rails.env]
       Object.const_set(name, Config.new(yml))
     end
   end
