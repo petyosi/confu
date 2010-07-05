@@ -1,15 +1,14 @@
 require "spec_helper"
 
 describe Confu do
+  let(:config) { Confu::Config.new(:foo => "bar") }
 
   it "should respond to given content" do
-    @c = Confu::Config.new(:foo => "bar")
-    @c.foo.should == "bar"
+    config.foo.should == "bar"
   end
 
   it "should throw error if not defined" do
-    @c = Confu::Config.new(:foo => "bar")
-    expect {@c.bar}.to raise_error NoMethodError
+    expect {config.bar}.to raise_error NoMethodError
   end
 
   it "should parse files"
