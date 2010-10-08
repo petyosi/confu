@@ -1,0 +1,8 @@
+development: &default
+  foo: bar
+
+test:
+  <<: *default
+
+production:
+  <<: *default
