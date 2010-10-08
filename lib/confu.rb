@@ -1,3 +1,4 @@
+require 'lib/confu_railtie.rb' if defined?(Rails)
 
 module Confu
   class Config
