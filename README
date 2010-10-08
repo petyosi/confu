@@ -11,9 +11,11 @@ The main thing I wanted to change is that files are separated not by environment
 Installation
 ============
 
-From your project's RAILS_ROOT, run:
+Add it in your Gemfile
 
-script/plugin install git://github.com/underlog/confu.git
+gem 'confu'
+
+From your project's RAILS_ROOT, run:
 
 mkdir config/site
 
