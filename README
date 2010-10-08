@@ -17,8 +17,9 @@ gem 'confu'
 
 From your project's RAILS_ROOT, run:
 
-mkdir config/site
+rails generate confu:install
 
+This will create sample config/site/app.yml file.
 Then you put multiple yml files in the site folder. Each config file will result in {file_name}Config constant defined, loading the current environment's section values. 
 
 So if you have site.yml, containing
