@@ -1,7 +1,9 @@
-gem 'rspec-rails', '2.0.0.beta.22'
+source :gemcutter
+
+# Specify your gem's dependencies in confu.gemspec
+gemspec
 
 group :test do
-  gem 'rails', ">= 3.0.0"
+  gem 'rspec-rails', '2.0.0.beta.22'
   gem 'ruby-debug'
 end
-

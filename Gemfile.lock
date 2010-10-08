@@ -1,4 +1,10 @@
+PATH
+  remote: .
+  specs:
+    confu (0.0.1)
+
 GEM
+  remote: http://rubygems.org/
   specs:
     abstract (1.0.0)
     actionmailer (3.0.0)
@@ -87,6 +93,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rails (>= 3.0.0)
+  bundler (>= 1.0.0)
+  confu!
+  rails (~> 3.0.0)
   rspec-rails (= 2.0.0.beta.22)
   ruby-debug
